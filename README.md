@@ -37,7 +37,7 @@ Penerapan encapsulation ini diterapkan pada package models, yakni pada class oba
 
    <img width="479" height="64" alt="image" src="https://github.com/user-attachments/assets/cbb0bdce-0ef4-4383-976f-bcafa97b5acb" />
 
-   Gambar kedua menunjukkan method public abstract void tampilkanDetail();. Method ini bersifat abstrak, artinya hanya didefinisikan tapi belum memiliki isi. Subclass yang mewarisi kelas Obat wajib mengimplementasikan method ini. Inilah salah satu cara abstraction bekerja, yaitu memaksa subclass untuk menentukan detail implementasi sesuai kebutuhan masing-masing.
+   Menunjukkan method public abstract void tampilkanDetail();. Method ini bersifat abstrak, artinya hanya didefinisikan tapi belum memiliki isi. Subclass yang mewarisi kelas Obat wajib mengimplementasikan method ini. Inilah salah satu cara abstraction bekerja, yaitu memaksa subclass untuk menentukan detail implementasi sesuai kebutuhan masing-masing.
    
 ## B. Penjelasan Inheritance & Overiding
 
@@ -47,7 +47,7 @@ Penerapan inheritance ini dilakukan pada package models dengan menjadikan class 
 
   - Konstruktor dan Atribut
 
-    Pada gambar pertama terlihat deklarasi class ObatBebas yang merupakan subclass dari Obat dan juga mengimplementasikan interface CetakInfo. Di dalamnya terdapat atribut tambahan anjuranLabel dan golongan yang khusus dimiliki oleh obat bebas. Constructor digunakan untuk menginisialisasi atribut dari superclass (Obat) sekaligus atribut tambahan tersebut. Jadi setiap kali objek ObatBebas dibuat, nama obat, kategori, expired date, stok, harga, serta anjuran dan golongan langsung tersimpan.   
+    Pada gambar ini terlihat deklarasi class ObatBebas yang merupakan subclass dari Obat dan juga mengimplementasikan interface CetakInfo. Di dalamnya terdapat atribut tambahan anjuranLabel dan golongan yang khusus dimiliki oleh obat bebas. Constructor digunakan untuk menginisialisasi atribut dari superclass (Obat) sekaligus atribut tambahan tersebut. Jadi setiap kali objek ObatBebas dibuat, nama obat, kategori, expired date, stok, harga, serta anjuran dan golongan langsung tersimpan.   
     <img width="1113" height="366" alt="image" src="https://github.com/user-attachments/assets/3440a835-9c94-4133-aa1f-32af5e6bec52" />
 
  
@@ -59,7 +59,7 @@ Penerapan inheritance ini dilakukan pada package models dengan menjadikan class 
      
   - Overriding Method
     
-    Gambar kedua menunjukkan implementasi overriding pada method tampilkanDetail(). Method ini menimpa method abstrak dari superclass Obat, sehingga detail khusus untuk obat bebas dapat ditampilkan. Di sini dicetak informasi seperti nama obat, kategori, expired date, stok, harga, golongan, dan anjuran label. Ada juga method tambahan getKategori() yang mengembalikan string "Obat Bebas". Jadi saat dipanggil, sistem tahu bahwa ini adalah obat bebas, bukan obat resep.
+    Menunjukkan implementasi overriding pada method tampilkanDetail(). Method ini menimpa method abstrak dari superclass Obat, sehingga detail khusus untuk obat bebas dapat ditampilkan. Di sini dicetak informasi seperti nama obat, kategori, expired date, stok, harga, golongan, dan anjuran label. Ada juga method tambahan getKategori() yang mengembalikan string "Obat Bebas". Jadi saat dipanggil, sistem tahu bahwa ini adalah obat bebas, bukan obat resep.
     
     <img width="656" height="518" alt="image" src="https://github.com/user-attachments/assets/b051e9b8-1906-4935-acd8-2eda2abf95f5" />
 
@@ -79,6 +79,7 @@ Penerapan inheritance ini dilakukan pada package models dengan menjadikan class 
   - Overriding Method
 
      Kode ini menunjukkan implementasi metode tampilkanDetail() yang merupakan bentuk overriding dari metode abstrak yang ada di superclass Obat. Dalam metode ini, informasi detail obat resep dicetak ke layar, meliputi nama obat, kategori, tanggal kedaluwarsa, stok, harga, serta tambahan khusus berupa nomorResep dan anjuranDokter. Overriding ini memungkinkan tampilan data obat resep berbeda dengan obat bebas, sehingga program mendukung polymorphism saat memanggil metode yang sama (tampilkanDetail) tapi dengan hasil berbeda sesuai subclass-nya.
+
      <img width="658" height="397" alt="image" src="https://github.com/user-attachments/assets/4810576e-7878-435a-815e-287b965d566e" />
 
 ### 3. Pembaruan pada package service
@@ -120,18 +121,25 @@ Setelah data dilengkapi, objek obat baru dibuat sesuai jenisnya lalu dimasukkan 
 
        <img width="612" height="766" alt="Screenshot 2025-09-21 150413" src="https://github.com/user-attachments/assets/162d2c83-6c15-4245-9f25-749ebab17643" />
 
-   - Overloading
+  - Overloading
 
-     Pada gambar ini terlihat ada dua method cariObat dengan parameter berbeda. Method pertama hanya menerima parameter String keyword, yang berfungsi untuk mencari obat berdasarkan nama obat. Sedangkan method kedua memiliki parameter tambahan boolean byKategori, yang dipakai untuk membedakan pencarian berdasarkan kategori obat. Kedua method ini adalah contoh Polymorphism melalui Overloading, karena nama method sama (cariObat) tetapi jumlah atau tipe parameternya berbeda. Dengan begitu, pengguna bisa memanggil method yang sesuai kebutuhan—apakah ingin mencari berdasarkan nama atau kategori.
-         
-     <img width="945" height="875" alt="image" src="https://github.com/user-attachments/assets/d1dee28e-1caa-44ab-9518-103deb412726" />
+    Pada gambar ini terlihat ada dua method cariObat dengan parameter berbeda. Method pertama hanya menerima parameter String keyword, yang berfungsi untuk mencari obat berdasarkan nama obat. Sedangkan method kedua memiliki parameter tambahan boolean byKategori, yang dipakai untuk membedakan pencarian berdasarkan kategori obat. Kedua method ini adalah contoh Polymorphism melalui Overloading, karena nama method sama (cariObat) tetapi jumlah atau tipe parameternya berbeda. Dengan begitu, pengguna bisa memanggil method yang sesuai kebutuhan apakah ingin mencari berdasarkan nama atau kategori.
 
-     - Interface
+    <img width="945" height="875" alt="image" src="https://github.com/user-attachments/assets/d1dee28e-1caa-44ab-9518-103deb412726" />
 
-       Pada gambar ini terlihat sebuah interface bernama CetakInfo yang memiliki satu method abstrak tampilkanDetail(). Interface ini digunakan sebagai kontrak bahwa setiap class yang mengimplementasikannya harus menyediakan implementasi dari method tersebut. Dalam programmu, ObatBebas dan ObatResep mengimplementasikan interface ini, sehingga mereka wajib menuliskan kode untuk menampilkan detail obat sesuai tipe masing-masing. Ini adalah penerapan dari Abstraction dengan cara menggunakan interface.
+  - Interface
 
-       <img width="328" height="193" alt="Screenshot 2025-09-29 153730" src="https://github.com/user-attachments/assets/14f4fefa-17a5-4756-b222-58c6cd01639a" />
-      
+    Pada gambar ini terlihat sebuah interface bernama CetakInfo yang memiliki satu method abstrak tampilkanDetail(). Interface ini digunakan sebagai kontrak bahwa setiap class yang mengimplementasikannya harus menyediakan implementasi dari method tersebut. Dalam programmu, ObatBebas dan ObatResep mengimplementasikan interface ini, sehingga mereka wajib menuliskan kode untuk menampilkan detail obat sesuai tipe masing-masing. Ini adalah penerapan dari Abstraction dengan cara menggunakan interface.
+
+    <img width="328" height="193" alt="Screenshot 2025-09-29 153730" src="https://github.com/user-attachments/assets/14f4fefa-17a5-4756-b222-58c6cd01639a" />
+
+   - Penggunaan Polymorphism (overloading) di package main
+        
+     Pada foto pertama terlihat potongan kode di bagian case 5 dalam kelas Apotek.java, di mana program memberikan opsi kepada pengguna untuk melakukan pencarian obat berdasarkan dua kriteria, yaitu nama obat atau kategori. Jika pengguna memilih opsi 1, maka program akan memanggil method cariObat(keyword) untuk mencari obat berdasarkan nama, sedangkan jika memilih opsi 2 maka program akan memanggil method cariObat(keyword, true) untuk mencari obat berdasarkan kategori. Struktur ini menunjukkan penerapan polymorphism melalui method overloading, karena terdapat dua method cariObat dengan parameter berbeda yang dipanggil sesuai kebutuhan input pengguna.
+
+     <img width="626" height="651" alt="Screenshot 2025-09-29 170857" src="https://github.com/user-attachments/assets/6908b4fb-399a-4c83-936a-ad89a5cb2578" />
+
+
 # B. Penjelasan Alur Output
 
 Penjelasan alur output ini hanya pada kode yang dilakukan perubahan, yakni terdapat pada menu tampilkan obat, tambah obat, dan update.
@@ -140,11 +148,9 @@ Penjelasan alur output ini hanya pada kode yang dilakukan perubahan, yakni terda
 
    Program menampilkan semua obat yang ada di daftarObat, baik Obat Bebas maupun Obat Resep. Setiap obat ditampilkan dengan detail atributnya seperti nama, kategori, tanggal kedaluwarsa, stok, harga, serta atribut tambahan (misalnya golongan dan anjuran pada obat bebas, atau nomor resep dan anjuran dokter pada obat resep).
    
-   <img width="487" height="705" alt="image" src="https://github.com/user-attachments/assets/0d780a62-d72d-44f8-a314-5631da10043d" />
-
-   <img width="397" height="217" alt="image" src="https://github.com/user-attachments/assets/ab93de21-bed0-4a8e-8a5c-48a263ee7b2b" />
+   <img width="718" height="1011" alt="image" src="https://github.com/user-attachments/assets/88be87c6-30e8-4563-9bf3-498d625bf061" />
    
-3. Tambah Obat
+2. Tambah Obat
 
    Saat user memilih menu 2 (Tambah Obat) lalu memilih jenis Obat Bebas. User diminta mengisi data obat baru, termasuk nama, kategori, expired date, stok, harga, anjuran, dan golongan. Jika data valid, objek ObatBebas baru dibuat menggunakan constructor dan ditambahkan ke daftarObat. Pesan “Obat berhasil ditambahkan!” muncul sebagai konfirmasi.
    
@@ -153,7 +159,7 @@ Penjelasan alur output ini hanya pada kode yang dilakukan perubahan, yakni terda
    <img width="460" height="221" alt="image" src="https://github.com/user-attachments/assets/8ff1ad4a-b919-4c8e-b7c9-c388aab92b94" />
 
 
-5. Update Obat
+3. Update Obat
 
    Saat user memilih menu 3 (Update Obat) lalu memilih obat nomor 4. Program menampilkan data lama obat (Vitamin C), lalu meminta input baru untuk tiap atribut. User dapat mengosongkan input jika tidak ingin mengubah nilai lama. Setelah update, obat tersebut diperbarui di dalam list dan ditampilkan pesan “Obat berhasil diupdate!”.
    
@@ -162,10 +168,11 @@ Penjelasan alur output ini hanya pada kode yang dilakukan perubahan, yakni terda
    <img width="664" height="218" alt="image" src="https://github.com/user-attachments/assets/38024667-5203-4f38-a537-b9b392c8c291" />
 
 
+4. Cari Obat
 
+   berikut hasil output program ketika dijalankan, yang membuktikan bahwa kedua pilihan pencarian berjalan dengan baik. Saat pengguna memilih opsi pencarian berdasarkan nama obat dan memasukkan keyword Amoxcillin, program berhasil menampilkan detail lengkap obat tersebut mulai dari kategori, tanggal kedaluwarsa, stok, harga, hingga informasi golongan dan anjuran. Selanjutnya ketika pengguna memilih pencarian berdasarkan kategori dengan keyword Analgesik, program menemukan obat dengan kategori tersebut yaitu Ibuprofen, dan menampilkan informasi detail yang sama lengkapnya. Hal ini menunjukkan bahwa overloading method cariObat benar-benar berfungsi sesuai dengan tujuan yang diinginkan.
 
-
-
+   <img width="526" height="772" alt="Screenshot 2025-09-29 171048" src="https://github.com/user-attachments/assets/d8af7e72-ca72-45bb-b316-48d6ba891d2b" />
 
 
 
